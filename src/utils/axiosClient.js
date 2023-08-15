@@ -18,7 +18,6 @@ axiosClient.interceptors.request.use((request) => {
   const accessToken = getItem(KEY_ACCESS_TOKEN);
   request.headers["Authorization"] = `Bearer ${accessToken}`;
   store.dispatch(setLoading(true));
-
   return request;
 });
 
