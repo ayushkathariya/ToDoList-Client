@@ -22,7 +22,7 @@ function Navbar() {
         <img src={homeImage} alt="Home" className="w-12 cursor-pointer" />
       </Link>
       <div className="flex items-center gap-4 md:gap-6">
-        <Link to={`/profile/@${myProfile?.name}`}>
+        <Link to={`/profile/${myProfile?._id}`}>
           <div className="avatar">
             <div className="w-10 rounded-full cursor-pointer ring ring-primary ring-offset-base-100 ring-offset-2">
               <img src={myProfile?.avatar?.url || avatar} />
