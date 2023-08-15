@@ -10,6 +10,7 @@ import LoadingBar from "react-top-loading-bar";
 import OnlyIfNotLoggedIn from "./components/protected-routes/OnlyIfNotLoggedIn";
 import Profile from "./pages/profile/Profile";
 import toast, { Toaster } from "react-hot-toast";
+import NotFound from "./pages/NotFoun/NotFound";
 
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_FAILURE = "toast_failure";
@@ -55,6 +56,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
